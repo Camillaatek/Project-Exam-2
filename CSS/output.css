@@ -60,4 +60,32 @@
   padding: 20px;
 }
 
+.components-bg {
+  background-color: #F4F4F4;
+  padding: 20px;
+}
+
+.components-box h1, p {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.components-box p {
+  color: #06c;
+}
+
+.components-pic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+footer {
+  background-color: #2C2C2C;
+  color: #fff;
+  height: 50px;
+}
+
 /*# sourceMappingURL=output.css.map */

@@ -6,7 +6,7 @@
 }
   
 .logo-container {
-    background-color: #2C2C2C;
+    background-color: variables.$navColor;
     color: white;
 }
   
@@ -60,4 +60,34 @@
 .info-container {
     margin: 10px;
     padding: 20px;
+}
+
+.components-bg {
+    background-color: #F4F4F4;
+    padding: 20px;
+}
+
+.components-box h1, p{
+   font-family: variables.$roboto;
+   display: flex;
+   justify-content: center;
+}
+
+.components-box p {
+    color: variables.$learnMore;
+}
+
+.components-pic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+
+
+footer {
+    background-color: variables.$navColor;
+    color: #fff;
+    height: 50px;
 }
