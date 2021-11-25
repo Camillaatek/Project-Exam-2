@@ -176,7 +176,7 @@
   position: absolute;
   display: block;
   text-align: center;
-  width: 55%;
+  width: 50%;
   font-size: 12px;
   animation-duration: 20s;
   animation-timing-function: ease-in-out;
@@ -205,7 +205,7 @@
     opacity: 1;
   }
   33.33%, 100% {
-    left: 110%;
+    left: 50%;
     opacity: 0;
   }
 }
@@ -219,7 +219,7 @@
     opacity: 1;
   }
   66.66%, 100% {
-    left: 110%;
+    left: 50%;
     opacity: 0;
   }
 }
@@ -233,7 +233,7 @@
     opacity: 1;
   }
   100% {
-    left: 110%;
+    left: 50%;
     opacity: 0;
   }
 }
