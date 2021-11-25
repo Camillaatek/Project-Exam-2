@@ -86,11 +86,12 @@
 
 
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
     .home-background {
         display: grid;
         grid-template-columns: 1fr 1fr;
         height: 400px;
+        margin: 10px;
         .home-text {
             padding: 0;
         }
@@ -112,6 +113,11 @@
     .info-container{
         display: grid;
         grid-template-columns: 1fr 1fr;
+        display: flex;
+        flex-wrap: inherit;
+        p {
+            margin: 0 5px 0 5px;
+        }
         .delivery {
             margin-bottom: 40px;
         }
@@ -122,8 +128,15 @@
 }
 
 @media screen and (min-width:1024px) {
+    .home-background {
+        margin: 20px;
+    }
     .info-container {
         display: flex;
         flex-wrap: inherit;
+        justify-content: space-evenly;
+        p {
+            margin: 0 10px 0 10px;
+        }
     }
 }
