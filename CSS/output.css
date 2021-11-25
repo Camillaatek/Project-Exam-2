@@ -140,6 +140,9 @@
   background-color: #2C2C2C;
   color: #fff;
   height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo-container {
@@ -158,6 +161,81 @@
   color: white;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
+}
+
+.info-banner {
+  height: 30px;
+  background-color: #db4ab0;
+  padding: 5px;
+  color: white;
+}
+
+.info-1,
+.info-2,
+.info-3 {
+  position: absolute;
+  display: block;
+  text-align: center;
+  width: 55%;
+  font-size: 12px;
+  animation-duration: 20s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.info-1 {
+  animation-name: info-1;
+}
+
+.info-2 {
+  animation-name: info-2;
+}
+
+.info-3 {
+  animation-name: info-3;
+}
+
+@keyframes info-1 {
+  0%, 8.3% {
+    left: -100%;
+    opacity: 0;
+  }
+  8.3%, 25% {
+    left: 25%;
+    opacity: 1;
+  }
+  33.33%, 100% {
+    left: 110%;
+    opacity: 0;
+  }
+}
+@keyframes info-2 {
+  0%, 33.33% {
+    left: -100%;
+    opacity: 0;
+  }
+  41.63%, 58.29% {
+    left: 25%;
+    opacity: 1;
+  }
+  66.66%, 100% {
+    left: 110%;
+    opacity: 0;
+  }
+}
+@keyframes info-3 {
+  0%, 66.66% {
+    left: -100%;
+    opacity: 0;
+  }
+  74.96%, 91.62% {
+    left: 25%;
+    opacity: 1;
+  }
+  100% {
+    left: 110%;
+    opacity: 0;
+  }
 }
 
 /*# sourceMappingURL=output.css.map */
