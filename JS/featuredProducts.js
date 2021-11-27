@@ -1,10 +1,10 @@
 const url = 'http://localhost:1337/Products';
 
-const resultsDoc = document.querySelector('.featuredProducts')
-// if (products.featured === true) {
+const resultsDoc = document.querySelector('.results')
+
     const getProducts = async () => {
     const response = await fetch(url);
-    
+
     const products = await response.json();
     console.log(products)
 
@@ -15,7 +15,7 @@ const resultsDoc = document.querySelector('.featuredProducts')
             break;
         }
 
-        resultsDoc.innerHTML += `<div class="featuredProducts">
+        resultsDoc.innerHTML += `<div class="result">
         <h2>${products[i].title}</h2>
         <img src="${products[i].image}">
         <p>${products[i].description}</p>
@@ -23,6 +23,5 @@ const resultsDoc = document.querySelector('.featuredProducts')
         </div>`;
     };
 }
-// }
 
 getProducts();
