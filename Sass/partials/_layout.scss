@@ -1,4 +1,6 @@
 @use "variables";
+@use "mixins";
+
 
 * {
     margin: 0;
@@ -84,6 +86,19 @@
     width: 70%;
 }
 
+.result{
+    width: 280px;
+    @include mixins.product;
+    img {
+        width: 200px;
+    }
+    h2 {
+        font-size: 15px;
+    }
+    button {
+        @include mixins.cartBtn;
+    }
+}
 
 
 @media screen and (min-width: 768px) {
