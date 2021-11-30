@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +17,7 @@
   margin: auto;
   padding-top: 20px;
   text-align: center;
+  color: #2C2C2C;
 }
 .home-text h1 {
   font-size: 50px;
@@ -67,10 +70,11 @@
   font-family: "Roboto", sans-serif;
   display: flex;
   justify-content: center;
+  color: #2C2C2C;
 }
 
 .components-box p {
-  color: #06c;
+  color: #b62897;
 }
 
 .components-pic {
@@ -80,28 +84,47 @@
   width: 70%;
 }
 
+.featured-text {
+  color: #2C2C2C;
+  font-size: 23px;
+  margin: 50px 10px 10px 20px;
+}
+
 .result {
   width: 280px;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  margin: 20px auto;
+  border-radius: 10px;
 }
 .result img {
-  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  display: block;
 }
 .result h2 {
+  margin: 5px 15px 5px 15px;
+  font-size: 20px;
+}
+.result p {
   font-size: 15px;
+  margin: 5px 15px 5px 15px;
+  color: #494949;
+}
+.result h3 {
+  margin: 20px 15px 5px 15px;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
 }
 .result button {
-  background-image: linear-gradient(to right, #2fff63 0%, #F09819 51%, #FF512F 100%);
+  background-image: linear-gradient(to right, #ff7a00, #Ffe600);
   margin: 10px;
-  padding: 15px 45px;
+  padding: 10px;
   text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 20px #eee;
+  font-weight: bold;
+  color: #2C2C2C;
   border-radius: 10px;
-  display: block;
+  border-color: whitesmoke;
 }
 
 @media screen and (min-width: 768px) {
@@ -127,6 +150,11 @@
   }
   .home-background .home-pc img {
     width: 350px;
+  }
+
+  .results {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .info-container {
@@ -162,11 +190,13 @@
 }
 .footer {
   background-color: #2C2C2C;
-  color: #fff;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.footer p {
+  color: white;
 }
 
 .logo-container {
@@ -260,6 +290,12 @@
     left: 50%;
     opacity: 0;
   }
+}
+.products-headline-container {
+  margin-left: 20px;
+}
+.products-headline-container h1 {
+  font-family: "Roboto", sans-serif;
 }
 
 /*# sourceMappingURL=output.css.map */

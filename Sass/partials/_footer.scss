@@ -1,8 +1,12 @@
+@use "variables";
+
 .footer {
-    background-color: #2C2C2C;
-    color: #fff;
+    background-color: variables.$navColor;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
+    p {
+        color: white;
+    }
 }

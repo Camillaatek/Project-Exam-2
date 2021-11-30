@@ -19,8 +19,8 @@ const resultsDoc = document.querySelector('.results')
         <img src="${products[i].image_url}">
         <h2>${products[i].title}</h2>
         <p>${products[i].description}</p>
-        <h3>${products[i].price}</h3>
-        <button>ADD TO CART</button>
+        <h3>$${products[i].price}</h3>
+        <div class="button"><a href="product-item.html"><button>ADD TO CART</button> </a></div>
         </div>`;
     };
 }

@@ -17,6 +17,7 @@
     margin: auto;
     padding-top: 20px;
     text-align: center;
+    color: variables.$navColor;
     h1 {
         font-size: 50px;
     }
@@ -73,10 +74,11 @@
    font-family: variables.$roboto;
    display: flex;
    justify-content: center;
+   color: variables.$navColor;
 }
 
 .components-box p {
-    color: variables.$learnMore;
+    color: rgb(182, 40, 151);
 }
 
 .components-pic {
@@ -86,19 +88,46 @@
     width: 70%;
 }
 
+.featured-text {
+    color: variables.$navColor;
+    font-size: 23px;
+    margin: 50px 10px 10px 20px;
+}
+
 .result{
     width: 280px;
     @include mixins.product;
+    margin: 20px auto; 
+    border-radius: 10px;
+   
+   
     img {
-        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        display: block;
+     
     }
     h2 {
+        margin: 5px 15px 5px 15px;
+        font-size: 20px;
+    }
+    p {
         font-size: 15px;
+        margin: 5px 15px 5px 15px;
+        color: rgb(73, 73, 73);
+    }
+    h3 {
+        margin: 20px 15px 5px 15px;
+        font-family: variables.$roboto;
+        font-size: 20px
     }
     button {
         @include mixins.cartBtn;
     }
+   
 }
+
 
 
 @media screen and (min-width: 768px) {
@@ -124,6 +153,10 @@
         .home-pc img{
             width: 350px;
         }
+    }
+    .results {
+        display: flex;
+        flex-wrap: wrap;
     }
     .info-container{
         display: grid;
