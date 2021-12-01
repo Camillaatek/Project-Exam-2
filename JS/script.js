@@ -40,7 +40,7 @@ const productsUrl = baseUrl + "products";
 
 (async function() {
     const container = document.querySelector(".results");
-    
+
     try {
         const response = await fetch(productsUrl);
         const json = await response.json();

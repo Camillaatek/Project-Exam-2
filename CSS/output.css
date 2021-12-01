@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -117,14 +118,14 @@
   font-size: 20px;
 }
 .results .result button {
-  background-image: linear-gradient(to right, #ff7a00, #Ffe600);
-  margin: 10px;
+  background-image: linear-gradient(to right, #8200ff, #dc00fe);
+  margin: 10px 30px 10px 30px;
   padding: 10px;
   text-align: center;
-  font-weight: bold;
-  color: #2C2C2C;
-  border-radius: 10px;
-  border-color: whitesmoke;
+  width: 260px;
+  color: #fff;
+  border-radius: 29px;
+  border: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -296,6 +297,69 @@
 }
 .products-headline-container h1 {
   font-family: "Roboto", sans-serif;
+}
+
+.results {
+  background-color: #ebebeb;
+  font-family: "Roboto", sans-serif;
+}
+.results .pic button {
+  background: #ffffff;
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+  width: 40px;
+  color: #000;
+  border-radius: 50%;
+  border: none;
+}
+.results h1 {
+  font-size: 20px;
+}
+.results p {
+  font-size: 15px;
+  padding-top: 10px;
+  color: #494949;
+}
+.results img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 55%;
+}
+.results button {
+  background-image: linear-gradient(to right, #8200ff, #dc00fe);
+  margin: 10px 30px 10px 30px;
+  padding: 10px;
+  text-align: center;
+  width: 260px;
+  color: #fff;
+  border-radius: 29px;
+  border: none;
+  text-align: center;
+}
+.results div.button {
+  background: #fff;
+}
+.results .detail-info {
+  padding: 0 30px 0 30px;
+  background-color: #fff;
+  border-radius: 50px 50px 0 0;
+}
+.results .detail-info h2 {
+  font-size: 20px;
+}
+.results h1 {
+  padding-top: 30px;
+}
+
+.detail-features {
+  font-family: "Roboto", sans-serif;
+  padding: 0 30px 0 30px;
+}
+.detail-features li {
+  list-style: none;
+  font-size: 15px;
 }
 
 /*# sourceMappingURL=output.css.map */

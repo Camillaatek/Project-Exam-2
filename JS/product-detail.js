@@ -52,15 +52,26 @@ console.log(productUrl);
     const container = document.querySelector(".results");
 
     container.innerHTML = 
-    `<h1>${details.title}</h1>
-    <p>${details.description}</p>
-    <h2>$${details.price}</h2>
-    <img src="${details.image_url}">
-    <div class="button"><a href="cart.html"><button>ADD TO CART</button> </a></div>
-    `;
+    `<div class="grid-container">
+        <div class ="pic">
+            <button onclick="goBack()">X</button>
+            <img src="${details.image_url}">
+        </div>
+        <div class="detail-info">
+        <h1>${details.title}</h1>
+        <p>${details.description}</p>
+        <h2>$${details.price}</h2>
+        </div>
+        <div class="button"><a href="cart.html"><button>Add To Cart</button> </a></div>
+        
+    </div>`;
     
     console.log(details);
     }catch (error) {
         displayMessage("error", error, ".results");
     }
 })();
+
+function goBack(){
+    location.replace("index.html")
+}

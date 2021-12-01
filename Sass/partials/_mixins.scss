@@ -6,12 +6,24 @@
 }
 
 @mixin cartBtn {
-    background-image: linear-gradient(to right, #ff7a00, #Ffe600);
-    margin: 10px;
+    background-image: linear-gradient(to right, #8200ff, #dc00fe);
+    margin: 10px 30px 10px 30px;
     padding: 10px;
     text-align: center;
-    font-weight: bold;
-    color: variables.$navColor;
-    border-radius: 10px;
-    border-color: whitesmoke;
+    width: 260px;
+    color: #fff;
+    border-radius: 29px;
+    border: none;
+}
+
+@mixin backBtn {
+    background: #ffffff;
+
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    width: 40px;
+    color: #000;
+    border-radius: 50%;
+    border: none;
 }

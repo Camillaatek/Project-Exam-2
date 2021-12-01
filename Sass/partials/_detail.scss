@@ -1,0 +1,61 @@
+@use "mixins";
+@use "variables";
+
+.results{
+    background-color: #ebebeb;
+    .pic {
+        
+        button {
+            @include mixins.backBtn
+        }
+    }
+    font-family: variables.$roboto;
+   
+    h1{
+        font-size: 20px;
+    }
+    p {
+        font-size: 15px;
+        padding-top: 10px;
+        color: variables.$description;
+    }
+    
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 55%;
+    }
+    
+    button {
+        @include mixins.cartBtn;
+        text-align: center;
+    }
+    div.button {
+        background: #fff;
+        
+    }
+    .detail-info {
+        padding: 0 30px 0 30px;
+        background-color: #fff;
+        border-radius: 50px 50px 0 0;
+        h2 {
+        font-size: 20px;
+        
+       
+    }
+    }
+    h1{
+        padding-top: 30px;
+    }
+
+}
+
+.detail-features {
+    font-family: variables.$roboto;
+    padding: 0 30px 0 30px;
+    li {
+        list-style: none;
+        font-size: 15px;
+    }
+}
