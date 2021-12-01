@@ -1,28 +1,62 @@
-const url = 'http://localhost:1337/Products';
+// const url = 'http://localhost:1337/Products';
 
-const resultsDoc = document.querySelector('.results')
+// const resultsDoc = document.querySelector('.results')
 
-    const getProducts = async () => {
-    const response = await fetch(url);
+//     const getProducts = async () => {
+//     const response = await fetch(url);
 
-    const products = await response.json();
-    console.log(products)
+//     const products = await response.json();
+//     console.log(products)
 
-    resultsDoc.innerHTML ='';
+//     resultsDoc.innerHTML ='';
 
-    for (let i = 0; i <products.length; i++) {
-        if (i === 4) {
-            break;
-        }
+//     for (let i = 0; i <products.length; i++) {
+//         if (i === 4) {
+//             break;
+//         }
 
-        resultsDoc.innerHTML += `<div class="result"><a href="product-item.html?id=${products.id}">
-        <img src="${products[i].image_url}"></a>
-        <h2>${products[i].title}</h2>
-        <p>${products[i].description}</p>
-        <h3>$${products[i].price}</h3>
-        <div class="button"><a href="cart.html"><button>ADD TO CART</button> </a></div>
-        </div>`;
-    };
-}
+//         resultsDoc.innerHTML += `<div class="result"><a href="product-item.html?id=${products.id}">
+//         <img src="${products[i].image_url}"></a>
+//         <h2>${products[i].title}</h2>
+//         <p>${products[i].description}</p>
+//         <h3>$${products[i].price}</h3>
+//         <div class="button"><a href="cart.html"><button>ADD TO CART</button> </a></div>
+//         </div>`;
+//     };
+// }
 
-getProducts();
+// getProducts();
+
+import {baseUrl} from "./settings/api.js";
+import displayMessage from "./Components/Common/displayMessage.js";
+
+const productsUrl = baseUrl + "products";
+
+(async function() {
+    const container = document.querySelector(".results")
+
+    try {
+        const response = await fetch(productsUrl);
+        const json = await response.json();
+
+        container.innerHTML = "";
+
+
+
+        json.forEach(function (product) {
+            container.innerHTML += `<div class="result">
+                <a class="product" href="product-item.html?id=${product.id}">
+                <img src="${product.image_url}"></a>
+                <h2>${product.title}</h2>
+                <p>$${product.description}</p>
+                <h3>$${product.price}</h3>
+                <div class="button"><a href="cart.html"><button>ADD TO CART</button> </a></div>
+                </a>
+                </div>`;
+        });
+    }
+    catch(error) {
+        console.log(error);
+        displayMessage("error", error, ".results");
+    }
+})();
