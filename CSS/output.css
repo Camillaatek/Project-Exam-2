@@ -200,24 +200,122 @@
   color: white;
 }
 
-.logo-container {
-  background-color: #2c2c2c;
-  color: white;
-}
-
-.menu-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  height: 40px;
-}
-
-.nav-link {
-  list-style: none;
-  color: white;
-  text-decoration: none;
+header {
+  background-color: #2C2C2C;
   font-family: "Roboto", sans-serif;
 }
 
+li {
+  list-style: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.logo-border {
+  max-width: 300px;
+  padding: 1rem;
+  position: relative;
+  background: linear-gradient(to right, red, purple);
+  padding: 5px;
+}
+
+.nav-branding {
+  font-size: 2rem;
+  background: #222;
+  margin: 5px;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.nav-link {
+  transition: 0.3s ease-out;
+}
+
+.nav-link:hover {
+  color: #c415c4;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 100px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #2C2C2C;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+}
+@media (max-width: 768px) and (max-width: 375px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 100px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #2C2C2C;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+}
 .info-banner {
   height: 30px;
   background-color: #db4ab0;
