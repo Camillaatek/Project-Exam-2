@@ -27,12 +27,18 @@
 
 
 
+
+
+
+
+
+
 import {baseUrl} from "./settings/api.js";
 import displayMessage from "./Components/Common/displayMessage.js";
-const search = document.querySelector(".search");
-const productsUrl = baseUrl + "products";
 
-export function createProducts(product) {
+const productsUrl = baseUrl + "products";
+const search = document.querySelector(".search");
+
 (async function() {
     const container = document.querySelector(".results");
 
@@ -60,7 +66,9 @@ export function createProducts(product) {
         console.log(error);
         displayMessage("error", error, ".results");
     }
-})()};
+})();
+
+
 
 search.onkeyup = function () {
     // console.log(event);
@@ -75,3 +83,20 @@ search.onkeyup = function () {
 
     console.log(filteredProduct);
 }
+
+
+
+
+
+
+
+
+
+// import { baseUrl } from "./settings/api.js";
+// import { renderProducts } from "./ui/renderProducts.js";
+
+// const search = document.querySelector(".search");
+
+// let productsToRender = baseUrl;
+
+// renderProducts(productsToRender);

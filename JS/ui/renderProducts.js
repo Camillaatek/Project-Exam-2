@@ -1,28 +1,60 @@
-(async function() {
-    const container = document.querySelector(".results");
+import { baseUrl } from "../settings/api.js";
 
-    try {
-        const response = await fetch(productsUrl);
-        const json = await response.json();
+export function renderProducts(productsToRender) {
+    const productContainer = document.querySelector(".results");
+    productContainer.innerHTML = ""
 
-        container.innerHTML = "";
+    productsToRender.forEach(function (product) {
+        productContainer.innerHTML += `<div class="result">
+        <h4>${product.title}</h4>
+        </div>`;
+    })
+}
 
 
 
-        json.forEach(function (product) {
-            container.innerHTML += `<div class="result">
-                <a class="product" href="detail.html?id=${product.id}">
-                <img src="${product.image_url}"></a>
-                <h2>${product.title}</h2>
-                <p>$${product.description}</p>
-                <h3>$${product.price}</h3>
-                <div class="button"><a href="cart.html"><button>ADD TO CART</button> </a></div>
-                </a>
-                </div>`;
-        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// (async function() {
+//     const container = document.querySelector(".results");
+
+//     try {
+//         const response = await fetch(productsUrl);
+//         const json = await response.json();
+
+//         container.innerHTML = "";
+
+
+
+//         json.forEach(function (product) {
+//             container.innerHTML += `<div class="result">
+//                 <a class="product" href="detail.html?id=${product.id}">
+//                 <img src="${product.image_url}"></a>
+//                 <h2>${product.title}</h2>
+//                 <p>$${product.description}</p>
+//                 <h3>$${product.price}</h3>
+//                 <div class="button"><a href="cart.html"><button>ADD TO CART</button> </a></div>
+//                 </a>
+//                 </div>`;
+//         });
         
-    } catch(error) {
-        console.log(error);
-        displayMessage("error", error, ".results");
-    }
-})();
+//     } catch(error) {
+//         console.log(error);
+//         displayMessage("error", error, ".results");
+//     }
+// })();
