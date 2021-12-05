@@ -1,6 +1,8 @@
 // import {baseUrl} from "./settings/api.js";
 // import displayMessage from "./Components/Common/displayMessage.js";
 
+// import { fetchAPI } from "./settings/api";
+
 // const productsUrl = baseUrl + "products";
 
 // (async function() {
@@ -31,3 +33,30 @@
 //         displayMessage("error", error, ".results");
 //     }
 // })();
+
+import { createProduct } from "./ui/featuredProducts.js";
+import { fetchAPI } from "./settings/api.js";
+import {productsUrl} from "./settings/api.js";
+
+fetchAPI (createProduct, productsUrl);
+
+
+
+// import { createProducts } from "./ui/renderProducts.js"
+// import {baseUrl} from "./settings/api.js";
+// const productsUrl = baseUrl + "products";
+
+// async function getProducts() {
+//     try {
+//         const response = await fetch(productsUrl);
+//         const products = await response.json();
+//         console.log(products);
+//         createProducts(products)
+//     }
+//     catch (error) {
+//         console.log(error);
+//     }
+// }
+
+// getProducts();
+

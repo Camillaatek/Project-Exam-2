@@ -2,7 +2,6 @@
 @use "variables";
 
 .results{
-    background-color: #ebebeb;
     .pic {
         
         button {
@@ -31,10 +30,7 @@
         @include mixins.cartBtn;
         text-align: center;
     }
-    div.button {
-        background: #fff;
-        
-    }
+    
     .detail-info {
         padding: 0 30px 0 30px;
         background-color: #fff;

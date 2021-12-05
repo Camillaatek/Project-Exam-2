@@ -1,24 +1,37 @@
-import { baseUrl } from "../settings/api.js";
+// import { baseUrl } from "../settings/api.js";
 
-export function renderProducts(productsToRender) {
-    const productContainer = document.querySelector(".results");
-    productContainer.innerHTML = ""
+// export function renderProducts(productsToRender) {
+//     const productContainer = document.querySelector(".results");
+//     productContainer.innerHTML = ""
 
-    productsToRender.forEach(function (product) {
-        productContainer.innerHTML += `<div class="result">
-        <h4>${product.title}</h4>
-        </div>`;
-    })
+//     productsToRender.forEach(function (product) {
+//         productContainer.innerHTML += `<div class="result">
+//         <h4>${product.title}</h4>
+//         </div>`;
+//     })
+// }
+
+
+
+
+
+export function createProduct(products) {
+    const productsContainer = document.querySelector(".results");
+
+    productsContainer.innerHTML = "";
+
+        products.forEach(function (product) {
+            productsContainer.innerHTML += `<div class="result">
+                             <a class="product" href="detail.html?id=${product.id}">
+                             <img src="${product.image_url}"></a>
+                             <h2>${product.title}</h2>
+                             <p>$${product.description}</p>
+                             <h3>$${product.price}</h3>
+                             <div class="button"><a href="cart.html"><button>ADD TO CART</button> </a></div>
+                             </a>
+                          </div>`;
+        })
 }
-
-
-
-
-
-
-
-
-
 
 
 

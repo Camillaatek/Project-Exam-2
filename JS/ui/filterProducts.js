@@ -1,7 +1,7 @@
-import { createProduct } from "../html/createProduct.js";
+import { createProduct } from "./renderProducts";
 
 export function searchProducts(products) {
-    const search = document.querySelector(".search__input");
+    const search = document.querySelector(".search");
 
     search.onkeyup = function (event) {
         const searchValue = event.target.value;

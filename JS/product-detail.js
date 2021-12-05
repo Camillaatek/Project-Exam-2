@@ -60,10 +60,10 @@ console.log(productUrl);
         <div class="detail-info">
         <h1>${details.title}</h1>
         <p>${details.description}</p>
-        <h2>$${details.price}</h2>
-        </div>
-        <div class="button"><a href="cart.html"><button>Add To Cart</button> </a></div>
+        <h3>$${details.price}</h3>
         
+        <div class="button"><a href="cart.html"><button>Add To Cart</button> </a></div>
+        </div>
     </div>`;
     
     console.log(details);
