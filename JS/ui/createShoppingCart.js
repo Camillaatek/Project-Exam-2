@@ -7,7 +7,7 @@ export function createShoppingCart () {
     const shoppingCart = getShoppingCart();
 
 
-    const cartContainer = document.querySelector(".cart-products");
+    const cartContainer = document.querySelector(".results");
     cartContainer.innerHTML = "";
 
     if (shoppingCart.lenght === 0) {
@@ -28,15 +28,15 @@ export function createShoppingCart () {
      </div>`
     })
 
-    const totalPriceContainer = document.querySelector(".cart-total-price")
+//     const totalPriceContainer = document.querySelector(".cart-total-price")
 
-    let totalPrice = 0;
+//     let totalPrice = 0;
 
-    for(let i = 0; i < shoppingCart.lenght; i++) {
-        let price = parceFloat(shoppingCart[i].price);
+//     for(let i = 0; i < shoppingCart.lenght; i++) {
+//         let price = parceFloat(shoppingCart[i].price);
 
-        totalPriceContainer.innerHTML = totalPrice + " NOK";
+//         totalPriceContainer.innerHTML = totalPrice + " NOK";
 
-        console.log(shoppingCart)
-    }
+//         console.log(shoppingCart)
+//     }
 }

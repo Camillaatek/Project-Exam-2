@@ -62,10 +62,16 @@ console.log(productUrl);
         <p>${details.description}</p>
         <h3>$${details.price}</h3>
         
-        <div class="button"><a href="cart.html"><button>Add To Cart</button> </a></div>
+        <div class="button"><a href=""><button>Add To Cart</button> </a></div>
         </div>
     </div>`;
     
+    const cartButton = document.querySelectorAll(".button");
+
+    cartButton.forEach((Button) => {
+        Button.addEventListener("click", addToCart);
+    })
+
     console.log(details);
     }catch (error) {
         displayMessage("error", error, ".results");
