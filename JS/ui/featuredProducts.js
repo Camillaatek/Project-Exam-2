@@ -27,8 +27,19 @@ export function createProduct(products) {
                              <h2>${product.title}</h2>
                              <p>${product.description}</p>
                              <h3>$${product.price}</h3>
-                             <div class="button"><a href="cart.html"><button>ADD TO CART</button> </a></div>
+                             <button id=${product.id}>Add to cartief</button>
+                             <i class="far fa-heart"></i>
                              </a>
                              </div>`;
         }})
 }
+
+// const favButtons = document.querySelectorAll(".result i");
+
+// favButtons.forEach((button) => {
+//     button.addEventListener("click", handleClick);
+// });
+
+// function handleClick() {
+//     console.log(event);
+// }

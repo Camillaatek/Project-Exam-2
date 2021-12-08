@@ -27,16 +27,4 @@ export function createShoppingCart () {
         </a>
      </div>`
     })
-
-//     const totalPriceContainer = document.querySelector(".cart-total-price")
-
-//     let totalPrice = 0;
-
-//     for(let i = 0; i < shoppingCart.lenght; i++) {
-//         let price = parceFloat(shoppingCart[i].price);
-
-//         totalPriceContainer.innerHTML = totalPrice + " NOK";
-
-//         console.log(shoppingCart)
-//     }
 }
