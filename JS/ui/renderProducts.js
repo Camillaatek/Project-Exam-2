@@ -31,7 +31,15 @@ export function createProduct(products) {
                           </div>`;
         })
 }
+// const favButtons = document.querySelectorAll(".result i");
 
+// favButtons.forEach((button) => {
+//     button.addEventListener("click", handleClick);
+// });
+
+// function handleClick() {
+//     console.log(event);
+// }
 
 
 

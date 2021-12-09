@@ -13,9 +13,18 @@
 
 //     createProduct(filteredProducts);
 // }
-
+const favorites = getExistingFavs();
 export function createProduct(products) {
     const productsContainer = document.querySelector(".results");
+    
+
+    // const doesObjectExist = favorites.find(function (fav) {
+    //     console.log(fav);
+
+    //     return parseInt(fav.id) === prdouct.id;
+    // });
+
+    // console.log(doesObjectExist);
 
     productsContainer.innerHTML = "";
 
@@ -32,14 +41,17 @@ export function createProduct(products) {
                              </a>
                              </div>`;
         }})
+
+
+const favButtons = document.querySelectorAll(".result i");
+
+favButtons.forEach((button) => {
+    button.addEventListener("click", handleClick);
+});
+
+function handleClick() {
+    this.classList.toggle("fa");
+    this.classList.toggle("far");
+    console.log(this)
 }
-
-// const favButtons = document.querySelectorAll(".result i");
-
-// favButtons.forEach((button) => {
-//     button.addEventListener("click", handleClick);
-// });
-
-// function handleClick() {
-//     console.log(event);
-// }
+}  

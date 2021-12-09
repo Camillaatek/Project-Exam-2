@@ -41,17 +41,6 @@ import {productsUrl} from "./settings/api.js";
 fetchAPI (createProduct, productsUrl);
 
 
-const favButtons = document.querySelectorAll(".result i");
-
-favButtons.forEach((button) => {
-    button.addEventListener("click", handleClick);
-});
-
-function handleClick() {
-    console.log(Event);
-}
-
-
 
 
 
