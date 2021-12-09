@@ -13,7 +13,17 @@
 
 //     createProduct(filteredProducts);
 // }
-const favorites = getExistingFavs();
+
+
+
+
+
+
+
+
+// const favorites = getExistingFavs();
+
+
 export function createProduct(products) {
     const productsContainer = document.querySelector(".results");
     

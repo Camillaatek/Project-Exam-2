@@ -28,7 +28,7 @@
 // getProducts();
 
 import {baseUrl} from "./settings/api.js";
-import displayMessage from "./Components/Common/displayMessage.js";
+// import displayMessage from "./Components/Common/displayMessage.js";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -76,6 +76,28 @@ console.log(productUrl);
     }catch (error) {
         displayMessage("error", error, ".results");
     }
+    // nytt
+
+    
+
+    // local storage
+    const addToCartBtn = document.querySelectorAll(".button")
+
+    addToCartBtn.forEach((button) => {
+        button.addEventListener("click", handleAddToCartClick);
+    });
+    // function handleAddToCart() {
+    //     const id = dataset.id;
+    //     const title = this.dataset.title;
+    //     const price = this.dataset.price;
+    //     const image = this.dataset.image;
+    //     const description = this.dataset.description;
+    //     const url = this.dataset.url;
+    // }
+
+
+
+    // nytt
 })();
 
 function goBack(){
