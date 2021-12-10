@@ -28,6 +28,7 @@
 // getProducts();
 
 import {baseUrl} from "./settings/api.js";
+import { getExistingCartItems } from "./settings/localStorage.js";
 // import displayMessage from "./Components/Common/displayMessage.js";
 
 const queryString = document.location.search;
@@ -61,45 +62,68 @@ console.log(productUrl);
         <h1>${details.title}</h1>
         <p>${details.description}</p>
         <h3>$${details.price}</h3>
-        
-        <div class="button"><a href=""><button>Add To Cart</button> </a></div>
+        <button class="button" id="addButton" data-id="${details.id}" data-title="${details.title}" data-price="${details.price}">Add to cartief</button>
+
         </div>
     </div>`;
-    
-    const cartButton = document.querySelectorAll(".button");
-
-    cartButton.forEach((Button) => {
-        Button.addEventListener("click", addToCart);
-    })
 
     console.log(details);
+
+    //add item to cart
+    const addButton = document.querySelector("#addButton");
+    console.log(addButton.innerHTML);
+    addButton.addEventListener("click", handleClick);
+    
+
+    
     }catch (error) {
         displayMessage("error", error, ".results");
     }
     // nytt
 
-    
-
-    // local storage
-    const addToCartBtn = document.querySelectorAll(".button")
-
-    addToCartBtn.forEach((button) => {
-        button.addEventListener("click", handleAddToCartClick);
-    });
-    // function handleAddToCart() {
-    //     const id = dataset.id;
-    //     const title = this.dataset.title;
-    //     const price = this.dataset.price;
-    //     const image = this.dataset.image;
-    //     const description = this.dataset.description;
-    //     const url = this.dataset.url;
-    // }
-
-
 
     // nytt
 })();
 
-function goBack(){
-    location.replace("index.html")
+function handleClick() {
+    const id = addButton.dataset.id;
+    const title = addButton.dataset.title;
+    const price = addButton.dataset.price;
+
+    console.log("ID:", id)
+    console.log("title:", title)
+    console.log("price:", price)
+
+    const currentCartItems = getExistingCartItems();
+
+    console.log(currentCartItems);
+
+    const itemsExist = currentCartItems.find(function (item) {
+        return item.id === id;
+    })
+
+    console.log(typeof itemsExist, itemsExist);
+    
+    if (!itemsExist) {
+        const item = { id: id, title: title, price: price };
+
+        currentCartItems.push(item);
+        saveCartItems(currentCartItems);
+        console.log(title + " was added to caaart!");
+    }
+    else {
+        const item = { id: id, title: title, price: price };
+
+        currentCartItems.push(item);
+        saveCartItems(currentCartItems);
+        console.log(title + "wasss added to cuart?");
+    }
 }
+
+function saveCartItems(cartItems) {
+    localStorage.setItem("cartitems", JSON.stringify(cartItems))
+}
+
+// function goBack(){
+//     location.replace("index.html")
+// }
