@@ -21,13 +21,17 @@ export function createProduct(products) {
     productsContainer.innerHTML = "";
 
         products.forEach(function (product) {
-            productsContainer.innerHTML += `<div class="result">
+            productsContainer.innerHTML += `<div class="all-products-container">
+            <div class="result">
+                             
                              <a class="product" href="detail.html?id=${product.id}">
                              <img src="${product.image_url}"></a>
                              <h2>${product.title}</h2>
                              <p>${product.description}</p>
                              <h3>$${product.price}</h3>
+                             <button id=${product.id}>Add to cartief</button>
                              </a>
+                             </div>
                           </div>`;
         })
 }
