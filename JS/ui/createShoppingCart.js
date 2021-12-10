@@ -1,30 +1,41 @@
-import displayMessage from "../Components/Common/displayMessage.js";
-import { getShoppingCart } from "../settings/localStorage.js"
+// import { getExistingCartItems } from "./settings/localStorage.js";
 
 
+// export function handleClick() {
+//     const id = addButton.dataset.id;
+//     const title = addButton.dataset.title;
+//     const price = addButton.dataset.price;
 
-export function createShoppingCart () {
-    const shoppingCart = getShoppingCart();
+//     console.log("ID:", id)
+//     console.log("title:", title)
+//     console.log("price:", price)
 
+//     const currentCartItems = getExistingCartItems();
 
-    const cartContainer = document.querySelector(".results");
-    cartContainer.innerHTML = "";
+//     console.log(currentCartItems);
 
-    if (shoppingCart.lenght === 0) {
-        displayMessage(
-            "my cart is empty"
-        );
-    }
+//     const itemsExist = currentCartItems.find(function (item) {
+//         return item.id === id;
+//     })
 
-    shoppingCart.forEach(function(product) {
-        cartContainer.innerHTML += `<div class="result">
-        <a class="product" href="detail.html?id=${product.id}">
-        <img src="${product.image_url}"></a>
-        <h2>${product.title}</h2>
-        <p>${product.description}</p>
-        <h3>$${product.price}</h3>
-        <div class="button"><a href="cart.html"><button>ADD TO CART</button> </a></div>
-        </a>
-     </div>`
-    })
-}
+//     console.log(typeof itemsExist, itemsExist);
+    
+//     if (!itemsExist) {
+//         const item = { id: id, title: title, price: price };
+
+//         currentCartItems.push(item);
+//         saveCartItems(currentCartItems);
+//         console.log(title + " was added to caaart!");
+//     }
+//     else {
+//         const item = { id: id, title: title, price: price };
+
+//         currentCartItems.push(item);
+//         saveCartItems(currentCartItems);
+//         console.log(title + "wasss added to cuart?");
+//     }
+//     function saveCartItems(cartItems) {
+//     localStorage.setItem("cartitems", JSON.stringify(cartItems))
+// }
+// }
+

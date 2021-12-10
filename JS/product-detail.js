@@ -79,20 +79,20 @@ console.log(productUrl);
     }catch (error) {
         displayMessage("error", error, ".results");
     }
-    // nytt
-
-
-    // nytt
+    
 })();
+
 
 function handleClick() {
     const id = addButton.dataset.id;
     const title = addButton.dataset.title;
     const price = addButton.dataset.price;
+    const image_url = addButton.dataset.image_url;
 
     console.log("ID:", id)
     console.log("title:", title)
     console.log("price:", price)
+    console.log("image", image_url)
 
     const currentCartItems = getExistingCartItems();
 
@@ -102,21 +102,19 @@ function handleClick() {
         return item.id === id;
     })
 
-    console.log(typeof itemsExist, itemsExist);
+    
     
     if (!itemsExist) {
-        const item = { id: id, title: title, price: price };
+        const item = { id: id, title: title, price: price, image_url: image_url };
 
         currentCartItems.push(item);
         saveCartItems(currentCartItems);
         console.log(title + " was added to caaart!");
     }
     else {
-        const item = { id: id, title: title, price: price };
-
-        currentCartItems.push(item);
-        saveCartItems(currentCartItems);
-        console.log(title + "wasss added to cuart?");
+        const newFavs = currentCartItems.filter((fav) => fav.id !== id);
+        saveCartItems(newFavs);
+        console.log(title + " gone!");
     }
 }
 
