@@ -62,7 +62,7 @@ console.log(productUrl);
         <h1>${details.title}</h1>
         <p>${details.description}</p>
         <h3>$${details.price}</h3>
-        <button class="button" id="addButton" data-id="${details.id}" data-title="${details.title}" data-price="${details.price}">Add to cartief</button>
+        <button class="button" id="addButton" data-id="${details.id}" data-title="${details.title}" data-price="${details.price}" data-image_url="${details.image_url}" >Add to cartief</button>
 
         </div>
     </div>`;
@@ -71,7 +71,7 @@ console.log(productUrl);
 
     //add item to cart
     const addButton = document.querySelector("#addButton");
-    console.log(addButton.innerHTML);
+    console.log(addButton.dataset);
     addButton.addEventListener("click", handleClick);
     
 
@@ -92,7 +92,7 @@ function handleClick() {
     console.log("ID:", id)
     console.log("title:", title)
     console.log("price:", price)
-    console.log("image", image_url)
+    console.log("image_url", image_url)
 
     const currentCartItems = getExistingCartItems();
 

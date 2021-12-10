@@ -14,11 +14,10 @@ console.log(cartItems);
 
 function createCartItems() {
     cartItems.forEach(product => {
-        cartContainer.innerHTML += `<div class="cart">
+        cartContainer.innerHTML += `<div class="cart-container">
                                      
-                                      <img src="${product.image_url}">
+        <img src="${product.image_url}" >
                                       <h2>${product.title}</h2>
-                                      
                                       <h3>$${product.price}</h3>
                                   </div>`
     });

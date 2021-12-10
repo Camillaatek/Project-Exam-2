@@ -1,0 +1,20 @@
+@use "variables";
+
+
+.all-cart-container {
+    h1{
+        font-size: 20px;
+        font-family: variables.$roboto;
+    }
+}
+
+.cart-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    img {
+        width: 100px;
+    }
+    h2 {
+        font-size: 15px;
+    }
+}
