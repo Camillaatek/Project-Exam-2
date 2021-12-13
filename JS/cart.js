@@ -4,9 +4,10 @@ import { productsUrl } from "./settings/api.js";
 import { getExistingCartItems } from "./settings/localStorage.js";
 
 
+
 // fetchAPI(createProduct, productsUrl);
 // createShoppingCart();
-
+const cartSum = document.querySelector(".cart-sum");
 const cartContainer = document.querySelector("#cart-container");
 
 const cartItems = getExistingCartItems();
@@ -32,8 +33,20 @@ if (cartItems.lenght === 0) {
     cartContainer.innerHTML = `<div class="card-error">why???</div>`
 }
 
+//cart sum
 
+let initSum = 0;
 
+function calculateSumPrice() {
+    cartItems.forEach(product => {
+        const finalSum = initSum += parseInt(product.price);
+        
+
+        cartSum.innerHTML = `$ ${finalSum}`;
+    })
+}
+
+calculateSumPrice();
 // import { saveToStorage, getFromStorage, cartItemsKey } from "./settings/localStorage";
 
 // const containerCartItems = document.querySelector(".container-products-cart");

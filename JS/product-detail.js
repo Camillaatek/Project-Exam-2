@@ -62,7 +62,7 @@ console.log(productUrl);
         <h1>${details.title}</h1>
         <p>${details.description}</p>
         <h3>$${details.price}</h3>
-        <button class="button" id="addButton" data-id="${details.id}" data-title="${details.title}" data-price="${details.price}" data-image_url="${details.image_url}" >Add to cartief</button>
+        <button class="button" id="addButton" data-id="${details.id}" data-title="${details.title}" data-price="${details.price}" data-image_url="${details.image_url}" >Add to cart</button>
 
         </div>
     </div>`;
