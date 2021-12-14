@@ -1,10 +1,26 @@
-export function getExistingCartItems(){
-    const cartItems = localStorage.getItem("cartitems");
-    if (cartItems === null) {
-        return [];
-    } else {
-        return JSON.parse(cartItems);
-    }
+const tokenKey = "token";
+const userKey = "user";
+
+export function saveToken(token) {
+  saveToStorage(tokenKey, token);
+}
+
+export function getToken() {
+  return getFromStorage(tokenKey);
+}
+
+export function saveUser(user) {
+  saveToStorage(userKey, user);
+}
+
+export function getUsername() {
+  const user = getFromStorage(userKey)
+
+  if(user) {
+    return user.username;
+  }
+
+  return null;
 }
 
 function saveToStorage(key, value) {
@@ -22,6 +38,22 @@ function getFromStorage(key) {
 }
 
 
+
+
+
+
+
+
+
+
+export function getExistingCartItems(){
+    const cartItems = localStorage.getItem("cartitems");
+    if (cartItems === null) {
+        return [];
+    } else {
+        return JSON.parse(cartItems);
+    }
+}
 
 
 

@@ -1,7 +1,18 @@
-export default function createMenu(){
+import { getUsername } from "../../settings/localStorage.js";
 
+export default function createMenu(){
     const { pathname } = document.location;
-    console.log(pathname);
+
+    const username = getUsername();
+
+    let authLink = `<a href="/login.html" class="nav-link">Admin</a>`;
+
+    if (username) {
+        authLink = `<a>Hi ${username}👋</a>`;
+    }
+
+    console.log(username);
+
     const container = document.querySelector(".menu-container");
 
     container.innerHTML = `  <nav class="navbar">
@@ -16,7 +27,7 @@ export default function createMenu(){
       <a href="/all-products.html" class="nav-link">Products</a>
     </li>
     <li class="nav-item">
-      <a href="/login.html" class="nav-link">Admin</a>
+      ${authLink}
     </li>
     <li class="nav-item">
         <a href="/cart.html"  class="nav-link">Cart</a>

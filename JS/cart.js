@@ -2,9 +2,10 @@ import { createProduct } from "./ui/renderProducts.js";
 import { fetchAPI } from "./settings/api.js";
 import { productsUrl } from "./settings/api.js";
 import { getExistingCartItems } from "./settings/localStorage.js";
+import createMenu from "./Components/Common/createMenu.js";
 
 
-
+createMenu()
 // fetchAPI(createProduct, productsUrl);
 // createShoppingCart();
 const cartSum = document.querySelector(".cart-sum");

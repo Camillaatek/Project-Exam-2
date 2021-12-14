@@ -27,8 +27,10 @@
 
 // getProducts();
 
+import createMenu from "./Components/Common/createMenu.js";
 import {baseUrl} from "./settings/api.js";
 import { getExistingCartItems } from "./settings/localStorage.js";
+createMenu()
 // import displayMessage from "./Components/Common/displayMessage.js";
 
 const queryString = document.location.search;
