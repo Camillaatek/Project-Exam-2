@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/CSS/output.css">
-    <title>Products</title>
+    <title>Login</title>
 </head>
 <body>
-    <header>
+    <!-- <header>
         <nav class="navbar">
             <div class="logo-border">
           <a href="/index.html" class="nav-branding">RGB</a>
@@ -33,35 +33,33 @@
             <span class="bar"></span>
           </div>
         </nav>
+    </header> -->
+    <header>
+      <div class="menu-container"></div>
     </header>
-    <div class="sectionwrapper">
-
-        <h1 class="heading">Admin Login</h1>
-
-        <form class="form">
-            <div class="message-container formmessage-container"></div>
-
-            <div class="formfield">
-                <label for="username" class="formlabel"></label>
-                <input id="username" class="forminput" placeholder="Username" />
-                <div class="formmessageerror formmessageerror--username">Please enter a valid username or email !
-                </div>
-            </div>
-            <div class="formfield">
-                <label for="password" class="formlabel"></label>
-                <input id="password" type="password" class="forminput" placeholder="Password" />
-                <div class="formmessageerror formmessageerror--password">Please enter a valid password !</div>
-            </div>
-            <button class="btn formbutton" tabindex="0" type="submit">Log In</button>
-        </form>
-
-    </div>
+   <div class="form-container">
+     <div class="menu-container">
+       <h1>Login</h1>
+       <form>
+         <div class="message-container"></div>
+         <div>
+           <label for="username"> Username/email</label>
+           <input id="username" />
+         </div>
+         <div>
+          <label for="password"> Password</label>
+          <input id="password" />
+         </div>
+         <button>Submit</button>
+       </form>
+     </div>
+   </div>
     
 
     <footer class="footer">
         <p>RGB @Copyright 2021</p>
     </footer>
     <script src="./JS/burgermeny.js"></script>
-    <script type="module" src="/JS/all-products.js"></script>
+    <script type="module" src="/JS/settings/login.js"></script>
 </body>
 </html>

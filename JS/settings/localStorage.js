@@ -7,17 +7,37 @@ export function getExistingCartItems(){
     }
 }
 
-export function saveToStorage(key, value) {
+function saveToStorage(key, value) {
   localStorage.setItem(key, JSON.stringify(value));
 }
 
 function getFromStorage(key) {
   const value = localStorage.getItem(key);
+
   if(!value) {
-    return null;
+    return [];
   }
+
   return JSON.parse(value);
 }
+
+
+
+
+
+
+
+// export function saveToStorage(key, value) {
+//   localStorage.setItem(key, JSON.stringify(value));
+// }
+
+// function getFromStorage(key) {
+//   const value = localStorage.getItem(key);
+//   if(!value) {
+//     return null;
+//   }
+//   return JSON.parse(value);
+// }
 
 
 

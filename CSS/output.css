@@ -483,4 +483,80 @@ a {
   font-size: 15px;
 }
 
+:root {
+  --primary-colour: darkGreen;
+}
+
+.form-container a {
+  text-decoration: none;
+  color: #333;
+}
+.form-container label {
+  display: block;
+}
+.form-container form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.form-container form > div {
+  margin-bottom: 1rem;
+}
+.form-container form input {
+  width: 100%;
+  padding: 0.4rem;
+}
+.form-container button {
+  width: 100%;
+  height: 40px;
+  background: var(--primary-colour);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.form-container .menu a {
+  text-decoration: none;
+  color: #333;
+  padding-right: 1rem;
+}
+.form-container .menu a.active {
+  color: var(--primary-colour);
+}
+.form-container .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.form-container .product-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-container .product {
+  margin: 1rem;
+  margin-left: 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: white;
+  width: 250px;
+}
+.form-container .message {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid grey;
+  color: grey;
+}
+.form-container .message.error {
+  border-color: red;
+  color: white;
+  background: red;
+}
+.form-container .message.warning {
+  border-color: orange;
+  color: white;
+  background: orange;
+}
+.form-container .message.success {
+  border-color: green;
+  color: white;
+  background: green;
+}
+
 /*# sourceMappingURL=output.css.map */
