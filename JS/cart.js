@@ -9,6 +9,7 @@ import { getExistingCartItems } from "./settings/localStorage.js";
 // createShoppingCart();
 const cartSum = document.querySelector(".cart-sum");
 const cartContainer = document.querySelector("#cart-container");
+const emptyCart = document.querySelector(".emptycart")
 
 const cartItems = getExistingCartItems();
 console.log(cartItems);
@@ -30,7 +31,7 @@ createCartItems();
 
 
 if (cartItems.lenght === 0) {
-    cartContainer.innerHTML = `<div class="card-error">why???</div>`
+    emptyCart.innerHTML = `<div class="card-error">why???</div>`
 }
 
 //cart sum

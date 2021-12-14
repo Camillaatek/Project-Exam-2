@@ -21,7 +21,7 @@
               <a href="/all-products.html" class="nav-link">Products</a>
             </li>
             <li class="nav-item">
-              <a href="/admin.html" class="nav-link">Admin</a>
+              <a href="#" class="nav-link">Admin</a>
             </li>
             <li class="nav-item">
                 <a href="/cart.html" class="nav-link">Cart</a>
@@ -33,14 +33,30 @@
             <span class="bar"></span>
           </div>
         </nav>
-      </header>
-    
-    <div class="container">
-      <h1>Hey you!</h1>
-      <h2>Check out our products</h2>
-      <input class="search" placeholder="Search...">
-    <div class="results">hallo</div>
+    </header>
+    <div class="sectionwrapper">
+
+        <h1 class="heading">Admin Login</h1>
+
+        <form class="form">
+            <div class="message-container formmessage-container"></div>
+
+            <div class="formfield">
+                <label for="username" class="formlabel"></label>
+                <input id="username" class="forminput" placeholder="Username" />
+                <div class="formmessageerror formmessageerror--username">Please enter a valid username or email !
+                </div>
+            </div>
+            <div class="formfield">
+                <label for="password" class="formlabel"></label>
+                <input id="password" type="password" class="forminput" placeholder="Password" />
+                <div class="formmessageerror formmessageerror--password">Please enter a valid password !</div>
+            </div>
+            <button class="btn formbutton" tabindex="0" type="submit">Log In</button>
+        </form>
+
     </div>
+    
 
     <footer class="footer">
         <p>RGB @Copyright 2021</p>
