@@ -8,7 +8,8 @@ export default function createMenu(){
     let authLink = `<a href="/login.html" class="nav-link">Admin</a>`;
 
     if (username) {
-        authLink = `<a>Hi ${username}👋</a>`;
+        authLink = `<a>Hi ${username}👋</a>
+                    <a href="/add.html" class"nav-link">Add Products</a>`;
     }
 
     console.log(username);
@@ -21,13 +22,13 @@ export default function createMenu(){
     </div>
   <ul class="nav-menu">
     <li class="nav-item">
+      ${authLink}
+    </li>
+    <li class="nav-item">
       <a href="/index.html" class="nav-link">Home</a>
     </li>
-    <li class="nav-item">
+        <li class="nav-item">
       <a href="/all-products.html" class="nav-link">Products</a>
-    </li>
-    <li class="nav-item">
-      ${authLink}
     </li>
     <li class="nav-item">
         <a href="/cart.html"  class="nav-link">Cart</a>

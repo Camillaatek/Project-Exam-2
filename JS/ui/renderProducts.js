@@ -1,5 +1,7 @@
 // import { baseUrl } from "../settings/api.js";
 
+// import { getUsername } from "../settings/localStorage";
+
 // export function renderProducts(productsToRender) {
 //     const productContainer = document.querySelector(".results");
 //     productContainer.innerHTML = ""
@@ -11,16 +13,28 @@
 //     })
 // }
 
+import { baseUrl } from "../settings/api.js";
+import { getUsername } from "../settings/localStorage.js";
 
-
-
+const username = getUsername();
 
 export function createProduct(products) {
+
+    let editLink = ``;
     const productsContainer = document.querySelector(".results");
 
     productsContainer.innerHTML = "";
 
         products.forEach(function (product) {
+            
+
+            
+            if (typeof username != "undefined") {
+                editLink = `
+                            <a href="edit.html?id=${product.id}" class="editbtn">
+                            <span>Edit</span>
+                            </a>`;
+            }
             productsContainer.innerHTML += `<div class="all-products-container">
             <div class="result">
                              
@@ -31,6 +45,9 @@ export function createProduct(products) {
                              <h3>$${product.price}</h3>
                              <button id=${product.id}>Add to cart</button>
                              </a>
+                             <div class="editbtn">
+                             ${editLink}edit
+                             </div>
                              </div>
                           </div>`;
         })
