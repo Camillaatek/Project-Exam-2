@@ -23,22 +23,23 @@
 
 // const favorites = getExistingFavs();
 
+import { getUsername } from "../settings/localStorage.js";
+
+const username = getUsername();
 
 export function createProduct(products) {
+    let editLink = ``;
     const productsContainer = document.querySelector(".results");
-    
-
-    // const doesObjectExist = favorites.find(function (fav) {
-    //     console.log(fav);
-
-    //     return parseInt(fav.id) === prdouct.id;
-    // });
-
-    // console.log(doesObjectExist);
 
     productsContainer.innerHTML = "";
 
         products.forEach(function (product) {
+            if (typeof username != "undefined") {
+                editLink = `
+                            <a href="edit.html?id=${product.id}">
+                            <button class="editbtn">Edit</button>
+                            </a>`;
+            }
             if (product.featured === true){
             productsContainer.innerHTML += `<div class="result">
                             <a class="product" href="detail.html?id=${product.id}">
@@ -49,6 +50,7 @@ export function createProduct(products) {
                              <button id=${product.id}>Add to cart</button>
                              <i class="far fa-heart"></i>
                              </a>
+                             ${editLink}
                              </div>`;
         }})
 

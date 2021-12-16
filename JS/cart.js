@@ -24,6 +24,11 @@ function createCartItems() {
                                       <h2>${product.description}</h2>
                                       
                                       <h3>$${product.price}</h3>
+                                  </div>
+                                  <div>
+                                  <a href="detail.html?id=${product.id}">
+                                  <button>View product</button>
+                                  </a>
                                   </div>`
     });
 }
