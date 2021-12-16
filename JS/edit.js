@@ -1,5 +1,8 @@
 import createMenu from "./Components/Common/createMenu.js";
 import {baseUrl} from "./settings/api.js";
+import displayMessage from "./Components/Common/displayMessage.js"
+import { getToken } from "./settings/localStorage.js";
+import deleteButton from "./Components/products/deleteButton.js";
 
 createMenu()
 // import displayMessage from "./Components/Common/displayMessage.js";
@@ -15,22 +18,26 @@ const id = params.get("id");
 const productUrl = baseUrl + "products/" + id;
 
 const form = document.querySelector("form");
-const name = document.querySelector("#name");
+const title = document.querySelector("#title");
 const price = document.querySelector("#price");
 const description = document.querySelector("#description");
 const idInput = document.querySelector("#id");
 const message = document.querySelector(".message-container");
 const loading = document.querySelector(".loading");
+const imageUrl = document.querySelector("#image_url");
+const featured = document.querySelector("#featured");
 
 (async function() {
     try {
         const response = await fetch(productUrl);
         const details = await response.json();
 
-        name.value = details.name;
+        title.value = details.title;
         price.value = details.price;
         description.value = details.description;
         idInput.value = details.id;
+
+        deleteButton(details.id);
 
         console.log(details);
     } catch (error) {
@@ -49,5 +56,50 @@ function submitForm(event) {
 
     message.innerHTML = "";
 
-    
+    const titleValue = title.value.trim();
+    const priceValue = parseFloat(price.value);
+    const descriptionValue = description.value.trim();
+    const imageUrlValue = imageUrl.value.trim();
+    const featuredValue = featured.checked;
+    const idValue = idInput.value;
+
+    console.log("priceValue", priceValue);
+
+    if(titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0 || imageUrlValue.length === 0 || featuredValue.length === 0) {
+        displayMessage("warning", "Please supply proper values", ".message-container");
+    }
+
+    updateProduct(titleValue, priceValue, descriptionValue, idValue);
+
+}
+async function updateProduct(title, price, description, id, image_url, featured) {
+    const url = baseUrl + "products/" + id;
+    const data = JSON.stringify({title: title, price: price, description: description, image_url: image_url, featured: featured,})
+
+    const token = getToken();
+
+    const options = {
+        method: "PUT",
+        body: data,
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+        },
+    };
+
+    try {
+        const response = await fetch(url, options);
+        const json = await response.json();
+        console.log(json);
+
+        if(json.updated_at) {
+            displayMessage("success", "Product Updated", ".message-container");
+        }
+        if(json.error) {
+            displayMessage("error", "json.message", ".message-container");
+        }
+    }
+    catch(error) {
+        console.log(error)
+    }
 }

@@ -1,4 +1,5 @@
 import { getUsername } from "../../settings/localStorage.js";
+import logoutButton from "./logoutButton.js";
 
 export default function createMenu(){
     const { pathname } = document.location;
@@ -8,7 +9,7 @@ export default function createMenu(){
     let authLink = `<a href="/login.html" class="nav-link">Admin</a>`;
 
     if (username) {
-        authLink = `<a>Hi ${username}👋</a>
+        authLink = `<button id="logout">Logout ${username}👋</button>
                     <a href="/add.html" class"nav-link">Add Products</a>`;
     }
 
@@ -40,4 +41,5 @@ export default function createMenu(){
     <span class="bar"></span>
   </div>
 </nav>`;
+logoutButton();
 }

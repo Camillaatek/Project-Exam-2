@@ -122,11 +122,16 @@
         font-family: variables.$roboto;
         font-size: 20px
     }
+    .editbtn {
+    @include mixins.editbtn;
+}
     button {
         @include mixins.cartBtn;
     }
    
 }
+
+
 
 
 

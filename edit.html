@@ -47,8 +47,8 @@
        <form class="edit-form">
          <div class="message-container"></div>
          <div>
-           <label for="name">Name</label>
-           <input id="name" />
+           <label for="title">Title</label>
+           <input id="title" />
          </div>
          <div>
           <label for="price">Price</label>
@@ -58,9 +58,23 @@
             <label for="description">Description</label>
             <textarea id="description"></textarea>
         </div>
-        <input id="id" />
+        <div>
+            <label for="image_url">Image</label>
+            <textarea id="image_url"></textarea>
+        </div>
+        <div>
+            <label for="featured">Featured</label>
+            <input type="checkbox" id="featured"></input>
+        </div>
+        <input id="id" type="hidden"/>
         <div>
             <button id="update">Update</button>
+        </div>
+
+        <hr>
+
+        <div class="delete-container">
+            
         </div>
        </form>
      </div>

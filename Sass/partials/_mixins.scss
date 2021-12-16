@@ -16,6 +16,11 @@
     border: none;
 }
 
+@mixin editbtn {
+    background-image: #fff;
+    
+}
+
 @mixin backBtn {
     background: #ffffff;
 

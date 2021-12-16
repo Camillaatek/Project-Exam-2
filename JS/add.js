@@ -29,7 +29,7 @@ function submitForm(event) {
 
     console.log("priceValue", priceValue);
 
-    if(titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0 || imageUrlValue.length === 0) {
+    if(titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0 || imageUrlValue.length === 0 || featuredValue.length === 0) {
         displayMessage("warning", "Please supply proper values", ".message-container");
     }
 

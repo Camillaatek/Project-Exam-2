@@ -38,7 +38,9 @@ function getFromStorage(key) {
 }
 
 
-
+export function clearStorage() {
+  localStorage.clear();
+}
 
 
 

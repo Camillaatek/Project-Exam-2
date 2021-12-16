@@ -118,6 +118,9 @@
   font-family: "Roboto", sans-serif;
   font-size: 20px;
 }
+.results .result .editbtn {
+  background-image: #fff;
+}
 .results .result button {
   background-image: linear-gradient(to right, #8200ff, #dc00fe);
   margin: 10px 10px 10px 10px;
@@ -250,6 +253,11 @@ a {
 
 .nav-link:hover {
   color: #c415c4;
+}
+
+#logout {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
 }
 
 .hamburger {
@@ -557,6 +565,41 @@ a {
   border-color: green;
   color: white;
   background: green;
+}
+
+.loader {
+  margin: auto;
+  max-width: 500px;
+  width: 200px;
+  height: 200px;
+  border-radius: 10rem;
+  border: 3px solid white;
+  background: linear-gradient(#eb31b0, #e4c352, #7df8d6);
+  box-shadow: 0px 0px 100px -50px black;
+  animation: animate 1s linear infinite;
+}
+
+.loader::before {
+  position: absolute;
+  content: "";
+  background: #fff;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  border-radius: 10rem;
+  border: 3px solid white;
+  box-shadow: inset 0px 0px 100px -70px #111;
+}
+
+@keyframes animate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=output.css.map */

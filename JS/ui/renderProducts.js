@@ -31,8 +31,8 @@ export function createProduct(products) {
             
             if (typeof username != "undefined") {
                 editLink = `
-                            <a href="edit.html?id=${product.id}" class="editbtn">
-                            <span>Edit</span>
+                            <a href="edit.html?id=${product.id}">
+                            <button class="editbtn">Edit</button>
                             </a>`;
             }
             productsContainer.innerHTML += `<div class="all-products-container">
@@ -45,9 +45,9 @@ export function createProduct(products) {
                              <h3>$${product.price}</h3>
                              <button id=${product.id}>Add to cart</button>
                              </a>
-                             <div class="editbtn">
-                             ${editLink}edit
-                             </div>
+                             
+                             ${editLink}
+                             
                              </div>
                           </div>`;
         })
