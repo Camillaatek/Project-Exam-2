@@ -64,7 +64,7 @@ console.log(productUrl);
         <h1>${details.title}</h1>
         <p>${details.description}</p>
         <h3>$${details.price}</h3>
-        <button class="button" id="addButton" data-id="${details.id}" data-title="${details.title}" data-price="${details.price}" data-image_url="${details.image_url}" >Add to cart</button>
+        <button class="button" id="addButton" data-id="${details.id}" data-title="${details.title}" data-price="${details.price}" data-description="${details.description}" data-image_url="${details.image_url}" >Add to cart</button>
 
         </div>
     </div>`;
@@ -89,11 +89,13 @@ function handleClick() {
     const id = addButton.dataset.id;
     const title = addButton.dataset.title;
     const price = addButton.dataset.price;
+    const description = addButton.dataset.description;
     const image_url = addButton.dataset.image_url;
 
     console.log("ID:", id)
     console.log("title:", title)
     console.log("price:", price)
+    console.log("price:", description)
     console.log("image_url", image_url)
 
     const currentCartItems = getExistingCartItems();
@@ -107,7 +109,7 @@ function handleClick() {
     
     
     if (!itemsExist) {
-        const item = { id: id, title: title, price: price, image_url: image_url };
+        const item = { id: id, title: title, price: price, image_url: image_url, description: description };
 
         currentCartItems.push(item);
         saveCartItems(currentCartItems);
