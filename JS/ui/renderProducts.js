@@ -1,18 +1,3 @@
-// import { baseUrl } from "../settings/api.js";
-
-// import { getUsername } from "../settings/localStorage";
-
-// export function renderProducts(productsToRender) {
-//     const productContainer = document.querySelector(".results");
-//     productContainer.innerHTML = ""
-
-//     productsToRender.forEach(function (product) {
-//         productContainer.innerHTML += `<div class="result">
-//         <h4>${product.title}</h4>
-//         </div>`;
-//     })
-// }
-
 import { baseUrl } from "../settings/api.js";
 import { getUsername } from "../settings/localStorage.js";
 

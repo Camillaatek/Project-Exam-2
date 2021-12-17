@@ -1,28 +1,3 @@
-
-// export function createFeaturedProducts(products){
-//     const featuredProductsContainer = document.querySelector(".featured-results");
-    
-//     featuredProductsContainer.innerHTML = "";
-
-//     const filteredProducts = products.filter(function (product) {
-//         if (product.featured === true) {
-//             return true;
-//         }
-//         console.log(products)
-//     });
-
-//     createProduct(filteredProducts);
-// }
-
-
-
-
-
-
-
-
-// const favorites = getExistingFavs();
-
 import { getUsername } from "../settings/localStorage.js";
 
 const username = getUsername();
