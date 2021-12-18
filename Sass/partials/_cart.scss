@@ -3,19 +3,53 @@
 
 .all-cart-container {
     h1{
-        font-size: 20px;
+        font-size: 25px;
+        margin: 10px 0 10px 15px;
         font-family: variables.$roboto;
+        color: variables.$navColor;
+    }
+    .all-cart-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        font-size: 10px;
+        color: variables.$description;
     }
 }
 
 .cart-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    // overflow: hidden;
+    // white-space: nowrap;
+    // text-overflow: ellipsis;
     img {
         width: 100px;
     }
     h2 {
         font-size: 15px;
+    }
+    p {
+        font-size: 10px;
+    }
+}
+
+.cart-container-summary {
+    h4{
+        color: variables.$navColor;
+        font-family: variables.$roboto;
+        margin: 15px;
+    }
+}
+
+.summary-cost {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    h4 {
+        color: variables.$navColor;
+    }
+    p {
+        font-weight: bold;
+        text-align: start;
     }
 }
 

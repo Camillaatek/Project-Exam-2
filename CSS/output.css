@@ -476,8 +476,16 @@ a {
 }
 
 .all-cart-container h1 {
-  font-size: 20px;
+  font-size: 25px;
+  margin: 10px 0 10px 15px;
   font-family: "Roboto", sans-serif;
+  color: #2C2C2C;
+}
+.all-cart-container .all-cart-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 10px;
+  color: #494949;
 }
 
 .cart-container {
@@ -489,6 +497,27 @@ a {
 }
 .cart-container h2 {
   font-size: 15px;
+}
+.cart-container p {
+  font-size: 10px;
+}
+
+.cart-container-summary h4 {
+  color: #2C2C2C;
+  font-family: "Roboto", sans-serif;
+  margin: 15px;
+}
+
+.summary-cost {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.summary-cost h4 {
+  color: #2C2C2C;
+}
+.summary-cost p {
+  font-weight: bold;
+  text-align: start;
 }
 
 .cart-list h2 {

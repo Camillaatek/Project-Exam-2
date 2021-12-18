@@ -16,18 +16,18 @@ console.log(cartItems);
 
 function createCartItems() {
     cartItems.forEach(product => {
-        cartContainer.innerHTML += `<div class="cart-container">
-                                     
-        <img src="${product.image_url}" >
-                                      <h2>${product.title}</h2>
-                                      <h2>${product.description}</h2>
-                                      
-                                      <h3>$${product.price}</h3>
-                                  </div>
-                                  <div>
-                                  <a href="detail.html?id=${product.id}">
-                                  <button>View product</button>
-                                  </a>
+        cartContainer.innerHTML += `<div class="cart-container">              
+                                        <img src="${product.image_url}" >
+                                        <div class="cart-product-info">
+                                            <h2>${product.title}</h2>
+                                            <p>${product.description}</p>
+                                            <a href="detail.html?id=${product.id}">
+                                                <button>View product</button>
+                                            </a>
+                                        </div>
+                                        <div class="cart-product-price">
+                                            <h3>$${product.price}</h3>
+                                        </div>
                                   </div>`
     });
 }
