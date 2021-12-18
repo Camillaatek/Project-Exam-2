@@ -107,7 +107,8 @@ header{
     .nav-menu{
       position: fixed;
       left: -100%;
-      top: 100px;
+      top: 70px;
+      z-index: 9999;
       gap: 0;
       flex-direction: column;
       background-color: variables.$navColor;
@@ -127,7 +128,8 @@ header{
         .nav-menu{
             position: fixed;
             left: -100%;
-            top: 100px;
+            top: 70px;
+            z-index: 9999;
             gap: 0;
             flex-direction: column;
             background-color: variables.$navColor;

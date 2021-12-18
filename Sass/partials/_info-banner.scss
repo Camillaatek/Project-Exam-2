@@ -1,6 +1,6 @@
 .info-banner {
     height: 30px;
-    background-color: rgb(219, 74, 176);
+    background-color: #dc00fe;
     padding: 5px;
     color: white;
   }
@@ -11,6 +11,7 @@
     display: block;
     text-align: center;
     width: 50%;
+    color: #fff;
     
     font-size: 12px;
   
@@ -47,4 +48,12 @@
       0%, 66.66% { left: -100%; opacity: 0; }
     74.96%, 91.62% { left: 25%; opacity: 1; }
     100% { left: 50%; opacity: 0; }
+} 
+
+@media screen and (min-width:768px) {
+  .info-1, 
+  .info-2, 
+  .info-3 {
+    font-size: 15px;
+  }
 }
