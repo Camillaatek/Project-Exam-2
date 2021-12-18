@@ -32,7 +32,9 @@ export default function createMenu(){
       <a href="/all-products.html" class="nav-link">Products</a>
     </li>
     <li class="nav-item">
-        <a href="/cart.html"  class="nav-link">Cart</a>
+        <a href="/cart.html"  class="nav-link">Cart
+        <i class="fas fa-shopping-cart"></i>
+        </a>
       </li>
   </ul>
   <div class="hamburger">
