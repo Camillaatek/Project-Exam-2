@@ -39,13 +39,10 @@ header{
     align-items: center;
     padding: 0 24px;
   }
-   .logo-border {
-    max-width: 300px;
-    padding: 1rem;
-    position: relative;
-    background: linear-gradient(to right, red, purple);
-    padding: 5px;
+   .logo-border img{
+    height: 50px;
   }
+  
   .nav-branding{
     font-size: 2rem;
     background: #222;

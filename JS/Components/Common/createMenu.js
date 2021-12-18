@@ -19,7 +19,7 @@ export default function createMenu(){
 
     container.innerHTML = `  <nav class="navbar">
     <div class="logo-border">
-  <a href="/index.html" class="nav-branding">RGB</a>
+    <a href="/index.html"><img src="/Bilder/logo.png" alt="logo"></a>
     </div>
   <ul class="nav-menu">
     <li class="nav-item">
