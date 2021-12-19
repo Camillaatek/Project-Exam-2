@@ -17,6 +17,9 @@ console.log(cartItems);
 
 function createCartItems() {
     cartItems.forEach(product => {
+        // if (cartContainer.innerHTML === '') {
+        //  cartContainer.innerHTML = `<p>No products in your Cart!</p>`;
+        // }
         cartContainer.innerHTML += `<div class="cart-container">              
                                         <img src="${product.image_url}" >
                                         <div class="cart-product-info">
@@ -31,6 +34,7 @@ function createCartItems() {
                                         </div>
                                   </div>`
     });
+    
 }
 
 createCartItems();
@@ -58,7 +62,7 @@ const clearItemsButton = document.querySelector("#clearitemsbutton");
 clearItemsButton.addEventListener("click", () => {
     console.log("cart Cleared");
     deleteFromStorage("cartItems");
-    cartContainer.innerHTML = `<div class="cart-cleaned">you cleaned cart.</div>`
+    cartContainer.innerHTML = `<div class="cart-cleaned">No products in your cart!</div>`
     cartSum.innerHTML = `$ 0`;
 })
 
