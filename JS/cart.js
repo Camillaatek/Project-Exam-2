@@ -3,6 +3,7 @@ import { fetchAPI } from "./settings/api.js";
 import { productsUrl } from "./settings/api.js";
 import { getExistingCartItems } from "./settings/localStorage.js";
 import createMenu from "./Components/Common/createMenu.js";
+import { deleteFromStorage } from "./settings/localStorage.js";
 
 
 createMenu()
@@ -37,10 +38,6 @@ createCartItems();
 
 
 
-if (cartItems.lenght === 0) {
-    emptyCart.innerHTML = `<div class="card-error">why???</div>`
-}
-
 //cart sum
 
 let initSum = 0;
@@ -55,3 +52,16 @@ function calculateSumPrice() {
 }
 
 calculateSumPrice();
+
+const clearItemsButton = document.querySelector("#clearitemsbutton");
+
+clearItemsButton.addEventListener("click", () => {
+    console.log("cart Cleared");
+    deleteFromStorage("cartItems");
+    cartContainer.innerHTML = `<div class="cart-cleaned">you cleaned cart.</div>`
+    cartSum.innerHTML = `$ 0`;
+})
+
+if (cartItems.lenght === 0) {
+    emptyCart.innerHTML = `<div class="card-error">why???</div>`
+}

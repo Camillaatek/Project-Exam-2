@@ -22,23 +22,10 @@ export function createProduct(products) {
                              <h2>${product.title}</h2>
                              <p>${product.description}</p>
                              <h3>$${product.price}</h3>
-                             <button id=${product.id}>Add to cart</button>
-                             <i class="far fa-heart"></i>
+                             <a href="detail.html?id=${product.id}">
+                             <button id=${product.id}>View Product</button>
                              </a>
                              ${editLink}
                              </div>`;
         }})
-
-
-const favButtons = document.querySelectorAll(".result i");
-
-favButtons.forEach((button) => {
-    button.addEventListener("click", handleClick);
-});
-
-function handleClick() {
-    this.classList.toggle("fa");
-    this.classList.toggle("far");
-    console.log(this)
-}
 }  

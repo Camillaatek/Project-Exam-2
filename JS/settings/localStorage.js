@@ -37,6 +37,9 @@ function getFromStorage(key) {
   return JSON.parse(value);
 }
 
+export function deleteFromStorage (key) {
+  localStorage.removeItem(key);
+}
 
 export function clearStorage() {
   localStorage.clear();
